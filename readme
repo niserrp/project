@@ -1,0 +1,11 @@
+In the program, there is a structure defined as "node" which can store a pointer and an integer.
+
+In the function create_new_node, we create new nodes and the value of the integer is stored in it and it points to next node which is given as the input of the function. The function push_front and push_back use this function to add a new node at the front and end respectively. 
+
+I would prefer to use the push_front function to include new nodes as I have implemented the push_back function, each time the function has to find the end node of the list. In the main function, we only have the head to regenerate the whole list of nodes. In order to find the end of the list, I have scan throughout the list to find the node which points to null. It is computationally expensive to do that every time I add a new node. 
+
+Here I am storing the input into an array. Then I am using the push_front function to store them in the nodes. The array step could very well be eliminated. The push_front function gives me the head as the output and using the get_list_length function I am calculating the number of elements in the list. 
+
+Then using the print_list function I am printing the list of elements. Before deleting the list I am searching for 42 in the list using the function search_of_42, then to verify I am again counting and printing the list.
+
+There is no leakage of memory and warings for the program.
